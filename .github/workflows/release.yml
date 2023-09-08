@@ -5,6 +5,9 @@ on:
     tags:
       - v*.*.*
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ${{ matrix.os }}
@@ -52,5 +55,3 @@ jobs:
             dist/*.tar.gz
             dist/*.yml
             dist/*.blockmap
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
