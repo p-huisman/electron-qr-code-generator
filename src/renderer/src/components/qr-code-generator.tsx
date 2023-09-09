@@ -2,12 +2,12 @@ import "p-elements-core";
 
 import QRCodeStyling, {Options} from "qr-code-styling";
 
-import css from "./qr.css?inline";
+import css from "./qr-code-generator.css?inline";
 
 @CustomElementConfig({
-  tagName: "p-foo",
+  tagName: "p-qr-code-generator",
 })
-export class MyGreetings extends CustomElement{
+export class PQrCodeGeneratorElement extends CustomElement{
   constructor(private defaultStyling: Options, private qrCode?: QRCodeStyling) {
     super();
     this.defaultStyling = {
